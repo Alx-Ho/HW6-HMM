@@ -68,7 +68,7 @@ The Viterbi algorithm is implemented in log-space to avoid underflow. The dynami
 [TODO] Packaging <br>
   [x] Update README with description of your methods <br>
   [x] pip installable module (optional)<br>
-  [ ] github actions (install + pytest) (optional)
+  [x] github actions (install + pytest) (optional)
 
 
 ## Completing the Assignment 
