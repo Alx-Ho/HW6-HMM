@@ -1,5 +1,7 @@
 # HW6-HMM
 
+Note: I used code LLMs for nice formatting and commenting. 
+
 In this assignment, you'll implement the Forward and Viterbi Algorithms (dynamic programming). 
 
 
@@ -45,20 +47,27 @@ Within your code, consider the scope of the inputs and how the different paramet
 Finally, please update your README with a brief description of your methods. 
 
 
+## Methods
+
+The Forward algorithm is implemented with per-timestep scaling to avoid underflow. Each row of the forward table is normalized by its sum, and the final likelihood is recovered by multiplying the scale factors (tracked in log-space for stability).
+
+The Viterbi algorithm is implemented in log-space to avoid underflow. The dynamic program stores the best log-probability for each state at each timestep and a backpointer table for traceback, yielding the most likely hidden state sequence.
+
+
 
 ## Task List
 
 [TODO] Complete the HiddenMarkovModel Class methods  <br>
-  [ ] complete the `forward` function in the HiddenMarkovModelClass <br>
-  [ ] complete the `viterbi` function in the HiddenMarkovModelClass <br>
+  [x] complete the `forward` function in the HiddenMarkovModelClass <br>
+  [x] complete the `viterbi` function in the HiddenMarkovModelClass <br>
 
 [TODO] Unit Testing  <br>
-  [ ] Ensure functionality on mini and full weather dataset <br>
-  [ ] Account for edge cases 
+  [x] Ensure functionality on mini and full weather dataset <br>
+  [x] Account for edge cases 
 
 [TODO] Packaging <br>
-  [ ] Update README with description of your methods <br>
-  [ ] pip installable module (optional)<br>
+  [x] Update README with description of your methods <br>
+  [x] pip installable module (optional)<br>
   [ ] github actions (install + pytest) (optional)
 
 
